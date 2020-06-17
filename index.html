@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Work@Home</title>
+
+	<script src="libraries/p5.js"></script>
+	<script src="libraries/p5.dom.js"></script>
+	<script src="libraries/p5.sound.js"></script>
+	<!-- import tramontana -->
+	<script src="libraries/tramontana_min.js"></script>
+	<script src="libraries/bootstrap-slider.min.js"></script>
+	<script src="scripts/sketch.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+	<!-- bootstrap-slider css  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/css/bootstrap-slider.css">
+
+	<!-- OWN LOCAL CSS STYLESHEET -->
+	<link rel="stylesheet" href="s../css/style.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+	<!-- bootstrap-slider js  -->
+ 	<script src="scripts/bootstrap-slider.js"></script>
+	<link rel="stylesheet" href="css/bootstrap-slider.css">
+
+</head>
+
+<body>
+	<div id="main-content" class="container">
+		<div id="welcome">
+			<h1>Hi there</h1>
+			<h4>Welcome to your personal work coach!</h4>
+				<p>Use me in combination with your phone to improve your working at home experience. You will be reminded to take breaks and start working on your computer based on your own preferences.</p>
+				<p>Charge your own personal battery on your phone with different mini games to get you in the right mindset.
+				Button: Get started</p>
+			<button type="button" class="btn btn-primary" id="welcome" onclick="$('#welcome').hide(); $('#setup').show()">Start</button>
+		</div>
+		<div id="setup" class="init-hide">
+			<h2>To get you up and running there are some small steps left.</h2>
+			<br>
+			<form>
+				<div class="form-group">
+					<h1>1. Setup your experience</h1>
+					<h4>Select your preferred interval between work and breaks. </h4>
+					<p>The default is based on the Pomodoro technique.</p>
+					<label for="formControlRange">How long would you like to work?</label>
+					<br>
+					<input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="15" data-slider-max="120" data-slider-step="5" data-slider-value="25" onchange="onValueChange()" />
+					<br>
+					<br>
+					<label for="formControlRange">How long would you like to take a break?</label>
+					<br>
+					<input id="ex2" data-slider-id='ex1Slider' type="text" data-slider-min="3" data-slider-max="60" data-slider-step="1" data-slider-value="5" onchange="onValueChange()" />
+					<br>
+					<br>
+					<div id="breakOverview">You selected a work session of 25 minutes with a 5 minute break in between.</div>
+				</div>
+			</form>
+			<br>
+			<div>
+				<h1>2. Connect your phone to your computer</h1>
+				<h4>Wirelessly connect your phone to your computer.</h4>
+				<p>If you don’t have the app yet download it in the App Store <a href="https://itunes.apple.com/us/app/tramontana/id1121069555?mt=8">App Store</a>
+					or <a href="https://play.google.com/store/apps/details?id=com.pierdr.pierluigidallarosa.myactivity&hl=nl">Play Store</a>. Make sure you are connected to the same network.</p>
+				<label>Open the app and type the IP address of your phone.</label>
+				<br>
+				<div class="input-group mb-3">
+					<input type="text" id="ipInput" value="192.168.178.22" class="form-control" placeholder="192.168.178.22" aria-label="IP address" aria-describedby="basic-addon2">
+					<div class="input-group-append">
+						<button class="btn btn-primary" id="connectButton" onclick="connectDevice()" type="button">Connect</button>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div>
+				<h1>3. Ready to start working</h1>
+				<h4>To indicate that you are ready to start working, place your phone face down on your desk.</h4>
+			</div>
+		</div>
+	</div>
+
+
+	</div>
+</body>
+
+</html>

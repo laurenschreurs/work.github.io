@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  margin-left: 45px;
+  padding: 0;
+  overflow: hidden;
+}
+
+canvas {
+  margin: auto;
+}
+
+#main-content{
+  padding-top: 50px;
+}
+
+#sel1{
+  max-width: 200px;
+}
+
+
+#ex1Slider {
+  width: 50%;
+}
+
+#ex1Slider .slider-track{
+  background: rgba(0, 0, 0, 0);
+}
+
+#ex1Slider .slider-selection{
+  background: #007bff;
+  height: 7px;
+}
+
+#ex1Slider .slider-track-high{
+  background: #e4e4e4;
+  height: 7px;
+}
+#ex1Slider  .tooltip {
+  z-index: 9999;
+  margin-top: 20px;
+}
+
+/* .tooltip - background of tooltip */
+#ex1Slider  .tooltip-inner {
+  background-color: #007bff;
+  border-radius: 15px;
+  color: white;
+  margin-left: -3.5px;
+}
+
+#ex1Slider .tooltip-inner::after {
+  content: " min";
+}
+
+#ex1Slider .slider-handle {
+  background: #007bff;
+  width: 16px;
+  height: 16px;
+}
+
+/* This sets the color of the arrow that connects the tooltip to the handle */
+#ex1Slider .tooltip-arrow {
+  border-top-color: #fafafa;
+  margin-left: -7px;
+  display: none ;
+}
+
+#ex1Slider .arrow{
+  display: none;
+}
